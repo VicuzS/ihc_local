@@ -1,0 +1,62 @@
+.foodcard-container{
+    width: 50%;
+    min-height: 300px;
+    border-radius: 15px;
+    background: var(--color-primary);
+    box-shadow: -1px 1px 1px var(--color-accent);
+}
+
+.foodcard-container p,h1,h2,span{
+    color: white;
+}
+
+.foodcard-container img{
+    border-radius: 15px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.foodcard-container h2{
+    color: var(--color-accent);
+}
+
+.foodcard-left-container{
+    width: 30%;
+    margin-right: 20px;
+}
+
+.foodcard-right-container{
+    flex: 1;
+}
+
+.foodcard-right-head-container{
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.foodcard-right-head-container span{
+    font-size: 25px;
+}
+
+.foodcard-tags-container{
+    flex-wrap: wrap;
+}
+
+.tag-general{
+    display: inline-block;
+    background-color: var(--color-secundary);
+    margin: 0 25px 10px 0;
+    padding: 2.5px 10px;
+    border-radius: 8px;
+}
+
+.foodcard-ingredientes-container{
+    flex-shrink: 0;
+    width: 55%;
+    margin-right: 10px;
+}
+
+.foodcard-infoNutricional-container span{
+    font-size: 22px;
+}

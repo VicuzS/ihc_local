@@ -1,0 +1,169 @@
+.auth-container {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.auth-header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--color-accent);
+}
+
+.auth-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: var(--color-secundary);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-accent2);
+    transition: all 0.3s ease;
+}
+
+.auth-logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-logo {
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.auth-logo-container h1 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.auth-subtitle {
+    color: var(--color-accent);
+    font-size: 0.95rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--color-accent2);
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(223, 208, 184, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forgot-password {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.auth-button {
+    background-color: #008B8B;
+    /* Teal color consistent with admin button */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: #00a8a8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 139, 139, 0.3);
+}
+
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.auth-footer a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Light Theme Adjustments if needed specifically */
+:root[data-theme="light"] .auth-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}

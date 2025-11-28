@@ -1,0 +1,203 @@
+.createItem-main-container {
+    padding-top: 15px;
+    box-sizing: border-box;
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.createItem-main-container h2 {
+    color: var(--color-accent);
+}
+
+.data-one-container {
+    width: 35%;
+    margin-right: 70px;
+    flex-shrink: 0;
+}
+
+#input-kcal {
+    width: 170px;
+}
+
+#input-precio {
+    width: 180px;
+}
+
+#input-cat {
+    width: 180px;
+}
+
+#input-cat option {
+    background-color: var(--color-secundary);
+}
+
+.data-two-container {
+    width: 20%;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
+
+.item-img-container img {
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.textarea-style {
+    height: 100px;
+}
+
+.ingredientes-container {
+    width: 40%;
+}
+
+.etiquetas-container {
+    width: 40%
+}
+
+.basic-info-item-container {
+    margin-bottom: 50px;
+}
+
+.save-item-button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.save-item-button:hover {
+    transform: scale(1.1);
+}
+
+.cancel-item-button:hover {
+    transform: scale(1.1);
+}
+
+.cancel-item-button {
+    background-color: var(--color-secundary);
+    color: white;
+    cursor: pointer;
+}
+
+.foot-form {
+    justify-content: end;
+    align-items: center;
+}
+
+.extra-options-container,
+.sabor-options-container {
+    margin-top: 16px;
+}
+
+.extra-options-container label {
+    color: white;
+    margin-right: 40px;
+}
+
+.extra-options-container input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.sabor-options-container label {
+    color: white;
+    margin-right: 40px;
+}
+
+.sabor-options-container input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Image Upload */
+.image-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-preview {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--color-accent);
+}
+
+.placeholder-image {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    border-radius: 10px;
+    border: 2px dashed var(--color-accent2);
+}
+
+/* Ingredients List */
+.elements-list-form li {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.elements-list-form li:hover {
+    background-color: #d32f2f;
+    /* Red for delete indication */
+}
+
+.add-ingredient-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.small-input {
+    width: 150px;
+    padding: 5px 10px;
+}
+
+/* Selectable Lists (Tags/Allergens) */
+.selectable-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-accent2);
+    color: var(--text-primary);
+}
+
+.selectable-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--color-accent);
+}
+
+.selectable-list li.selected {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+.selectable-list li.selected-allergen {
+    background-color: #e53935;
+    /* Red for allergens */
+    border-color: #e53935;
+    color: white;
+}
+
+.selectable-list li.selected:hover,
+.selectable-list li.selected-allergen:hover {
+    opacity: 0.9;
+}

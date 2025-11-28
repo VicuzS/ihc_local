@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './styles/theme.css';
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*Colores globales para el sitio*/
+  --color-primary: #222831;
+  --color-secundary: #393E46;
+  --color-accent: #DFD0B8;
+  --color-accent2: #948979;
+}
+
+* {
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: var(--color-accent2) var(--color-secundary);
+}
+
+/*ESTILOS GLOBALRES PARA EL SCROLL/*
+/* Chrome, Edge, Brave, Opera */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-secundary);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent2);
+  border-radius: 10px;
+  border: 2px solid var(--color-secundary);
+  transition: background-color 0.3s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-primary);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Nunito Sans', Courier, monospace;
+  font-weight: 400;
+  color: white;
+
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 5px 0;
+}
+
+p {
+  font-family: 'Inter';
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+span {
+  font-family: 'Inter';
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.form-input-general {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--color-accent2);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  transition: 200ms;
+  font-family: 'Inter';
+}
+
+.form-input-general:focus {
+  outline: none;
+  border: 1px solid var(--color-accent);
+}
+
+.button-general {
+  transition: 200ms;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 20px;
+  text-align: center;
+  font-family: 'Inter';
+}
+
+.text-add-style {
+  display: inline-block;
+  transition: 300ms;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 10px 0;
+}
+
+.text-add-style:hover {
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.elements-list-form {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.elements-list-form li {
+  margin: 0 25px 10px 0;
+  padding: 2.5px 10px;
+  border-radius: 8px;
+  background-color: var(--color-secundary);
+}

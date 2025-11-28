@@ -1,0 +1,293 @@
+.misperfiles-main-container {
+    width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 0;
+    position: relative;
+}
+
+.misperfiles-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.misperfiles-usuario-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.misperfiles-usuario-button:hover {
+    transform: scale(1.05);
+}
+
+.usuario-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color-secundary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-accent2);
+    font-size: 24px;
+}
+
+.misperfiles-usuario-button span {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.misperfiles-title-section {
+    margin-bottom: 30px;
+}
+
+.misperfiles-title-section h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.misperfiles-subtitle {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+}
+
+.misperfiles-hint {
+    color: var(--color-accent2);
+    font-size: 0.95rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Zona de papelera */
+.trash-zone {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background-color: var(--color-secundary);
+    border: 3px dashed var(--color-accent2);
+    border-radius: 15px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease;
+    z-index: 1000;
+}
+
+.trash-zone.trash-visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) scale(1);
+}
+
+.trash-zone.trash-active {
+    background-color: #d32f2f;
+    border-color: #ff6b6b;
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.5);
+}
+
+.trash-icon {
+    font-size: 2.5rem;
+    transition: 200ms;
+}
+
+.trash-zone.trash-active .trash-icon {
+    transform: scale(1.3);
+}
+
+.trash-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Perfiles arrastrables */
+.draggable-perfil {
+    cursor: grab;
+    transition: transform 200ms, opacity 200ms;
+}
+
+.draggable-perfil:active {
+    cursor: grabbing;
+}
+
+.draggable-perfil.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.misperfiles-list-container {
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #1a1e24;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent2) var(--color-secundary);
+}
+
+.misperfiles-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.misperfiles-list-container::-webkit-scrollbar-track {
+    background: var(--color-secundary);
+    border-radius: 10px;
+}
+
+.misperfiles-list-container::-webkit-scrollbar-thumb {
+    background: var(--color-accent2);
+    border-radius: 10px;
+}
+
+.misperfiles-list-container::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+.misperfiles-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crear-perfil-button {
+    background-color: white;
+    color: var(--color-primary);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 30px;
+}
+
+.crear-perfil-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.salir-button {
+    background-color: var(--color-secundary);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 30px;
+}
+
+.salir-button:hover {
+    transform: scale(1.05);
+    background-color: #4a5058;
+}
+
+/* Modal de confirmación */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 200ms ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: var(--color-secundary);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    border: 2px solid var(--color-accent2);
+    animation: slideUp 300ms ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+}
+
+.modal-perfil-name {
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.modal-warning {
+    color: var(--color-accent2);
+    font-size: 0.95rem;
+    margin: 0 0 30px 0;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-cancel-button {
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    padding: 12px 35px;
+    border: 1px solid var(--color-accent2);
+}
+
+.modal-cancel-button:hover {
+    background-color: #2d3339;
+    transform: scale(1.05);
+}
+
+.modal-confirm-button {
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    padding: 12px 35px;
+}
+
+.modal-confirm-button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}

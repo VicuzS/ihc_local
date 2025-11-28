@@ -1,0 +1,13 @@
+# Ignorar dependencias
+node_modules
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar build temporal (si usas)
+dist

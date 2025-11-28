@@ -1,0 +1,74 @@
+/* Theme Configuration - MUST come first for proper cascade */
+/* Dark Theme as :root default */
+:root {
+    --color-primary: #222831;
+    --color-secundary: #393E46;
+    --color-accent: #DFD0B8;
+    --color-accent2: #948979;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #9aa0a8;
+}
+
+/* Dark Theme explicit */
+:root[data-theme="dark"] {
+    --color-primary: #222831;
+    --color-secundary: #393E46;
+    --color-accent: #DFD0B8;
+    --color-accent2: #948979;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #9aa0a8;
+}
+
+/* Light Theme - Override everything */
+:root[data-theme="light"] {
+    --color-primary: #f5f5f5 !important;
+    --color-secundary: #ffffff !important;
+    --color-accent: #8b6f47 !important;
+    --color-accent2: #6b7280 !important;
+    --text-primary: #1a1a1a !important;
+    --text-secondary: #2d2d2d !important;
+    --text-muted: #6b7280 !important;
+}
+
+/* Apply text colors for light theme */
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] h4,
+:root[data-theme="light"] p,
+:root[data-theme="light"] span {
+    color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .nav-link {
+    color: var(--text-secondary) !important;
+}
+
+:root[data-theme="light"] .category-button:hover {
+    background-color: rgba(139, 111, 71, 0.1) !important;
+}
+
+:root[data-theme="light"] .table-row:hover {
+    background-color: rgba(139, 111, 71, 0.05) !important;
+}
+
+/* Smooth transitions for theme changes */
+body,
+.navbar,
+.filtros-container,
+.item-menu-container,
+.mainpage-body-container,
+.menu-admin-container,
+.menu-admin-header,
+.categories-sidebar,
+.form-input-general,
+.button-general,
+h1,
+h2,
+h3,
+h4,
+p {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

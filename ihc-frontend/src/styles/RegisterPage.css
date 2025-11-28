@@ -1,0 +1,8 @@
+/* Import styles from LoginPage to maintain consistency and avoid duplication */
+@import './LoginPage.css';
+
+/* Specific overrides for Register Page if needed */
+.register-card {
+    max-width: 500px;
+    /* Slightly wider for register form */
+}

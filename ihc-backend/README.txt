@@ -1,0 +1,1 @@
+Se usará JavaScript como lenguaje de programación, como entorno de ejecución NodJS y como framework para el backend usaremos Express.
