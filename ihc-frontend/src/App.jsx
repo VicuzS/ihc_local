@@ -8,12 +8,12 @@ import MisPerfilesPage from './pages/MisPerfilesPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import ItemDetailPage from './pages/ItemDetailPage'
+import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { useEffect } from 'react'
 
 import "./app.css"
 function App() {
-  // Set initial theme on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -31,6 +31,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
